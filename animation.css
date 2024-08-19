@@ -1,0 +1,143 @@
+html, body{
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    margin: 0;
+    
+}
+.sky .grass .road{
+    position: relative;
+}
+.sky{
+    background-color: lightblue;
+    height: 40%;
+}
+/*.circle{
+    width: 100px;
+    padding: 50px 0;
+    line-height: 0;
+    margin: 60px auto;
+    background-color: brown;
+    color: white;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 1s;
+    text-align: center;
+}
+.circle:hover{
+    background-color:palevioletred;
+    transform: rotate(180deg);
+}*/
+.flight{
+    width:300px;
+    position: absolute;
+    bottom: 200px;
+    animation-name: fly;
+    animation-duration: 5s;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+    animation-delay: 0.5s;
+
+}
+.cloud{
+    width: 200px;
+    position: absolute;
+    right: 0;
+    animation-name: cycling;
+    animation-duration: 39s;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+    animation-delay: 1s;
+    opacity: 60%;; 
+   
+   
+}
+.cloud1{
+    position: absolute;
+    width: 200px;
+    right: 0;
+    animation-name: cycling;
+    animation-duration: 35s;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+    animation-delay: 2s;
+}
+/*.cloud:hover{
+    transform:translate(-680px);
+}*/
+.grass{
+
+   height: 30%;
+   background-color: green;
+   
+}
+.road{
+    
+    background: rgb(90, 90, 90);
+    height: 30%;
+    box-sizing: border-box;
+    border-top: 10px solid gray;
+    border-bottom: 10px solid gray;
+    width: 100%;
+    
+}
+/*.road:hover{
+    color: black;
+    
+}*/
+.line{
+    box-sizing: border-box;
+    border: 4px dashed #fafafa;
+    height: 0px;
+    width: 100%;
+    position: absolute;
+    bottom: 130px;
+}
+.mouse1{
+    width: 160px;
+    position: absolute;
+    bottom: 230px;
+    padding: 0px;
+    right: 0;  
+    animation-name: cycling;
+    animation-duration: 5s;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+    animation-delay: 5s;
+    
+}
+.mouse2{
+    padding: 20px;
+    width: 100px;
+    position: absolute;
+    bottom: 130px;
+    right: 0;  
+    animation-name: cycling;
+    animation-duration: 10s;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+    animation-delay: 2s;
+}
+.cat{
+    width: 290px;
+    bottom: 40px;
+    position: absolute;  
+    left: 0;
+    animation-name: drive;
+    animation-duration: 5s;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+   
+}
+@keyframes drive{
+    from {transform: translateX(-200px);}
+    to{transform: translateX(1850px);}
+}
+@keyframes cycling{
+    from{transform: translateX(200px);}
+    to{transform: translateX(-1850px);}
+}
+@keyframes fly{
+    from{height: 250px;}
+    to{transform:rotate(-20deg) translateX(2100px);}
+}
